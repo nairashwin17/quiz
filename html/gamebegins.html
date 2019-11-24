@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="gamebegins">
+        <div class="gamebeginalert">
+            <h1 class="begindata">
+                The Game <br> Begins In
+            </h1>
+            <div id="count_num">3</div>
+            <div class="coins">
+                <div class="coin3">
+                    <img src="images/coin3.png" alt="">
+                </div>
+                <div class="coin2">
+                    <img src="images/coin2.png" alt="">
+                </div>
+                <div class="coin1">
+                        <img src="images/coin1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            setInterval(function(){ 
+                $('.begindata').hide();
+                $('.coin3').show();
+                $('#count_num').show();
+                }, 1500);
+            
+                function endCountdown() {
+                    // logic to finish the countdown here
+                    window.location.href = "letsplay.html";
+                 }
+      
+                function handleTimer() {
+                    if(count === 0) {
+                    clearInterval(timer);
+                    endCountdown();
+                    } else {
+                    $('#count_num').html(count);
+                    count--;
+                        if(count== 1){
+                            $('.coin2').show();
+                        }
+                        if(count== 0){
+                            $('.coin1').show();
+                        }
+                    }
+                }
+      
+                var count = 3;
+                var timer = setInterval(function() { handleTimer(count); }, 1500);
+           
+        });
+    </script>
+
+    
+</body>
+</html>

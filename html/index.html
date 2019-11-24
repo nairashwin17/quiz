@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="mainpage">
+        <div class="content-wrapper">
+            <h1 class="maintitle">Get ready to experience
+                mag<span class="yellow">IQ</span>lub!</h1>
+                <p class="titledata">Play the quiz and answer correctly.<br>
+                    Experience the magic of MagiQlub for free!<br>
+                    <span class="orange">Be quick. Be smart!</span>
+                </p>
+                <button class="startquiz">
+                    Start the quiz
+                </button>
+                    <div class="vector">
+                        <img src="images/mainpage-illustration.png" alt="">
+                    </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".startquiz").click(function(){
+                window.location.href = "gamebegins.html";
+            });
+        });
+    </script>
+</body>
+</html>

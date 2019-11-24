@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'bnb';
+    src: url('../fonts/BebasNeueBold.ttf');
+}
+@font-face {
+    font-family: 'bnl';
+    src: url('../fonts/BebasNeueLight.otf');
+}
+@font-face {
+    font-family: 'montb';
+    src: url('../fonts/Montserrat-Bold.otf');
+}
+@font-face {
+    font-family: 'cstdb';
+    src: url('../fonts/CircularStdBold.ttf');
+}
+@font-face {
+    font-family: 'myraid';
+    src: url('../fonts/myriad.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    word-wrap: break-word;
+}
+img{
+    max-width: 100%;
+}
+.mainpage {
+    background-image: url('../images/background-color.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.content-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 90vh;
+}
+.maintitle{
+    font-family: 'bnb';
+    font-size: 145px;
+    width: 85%;
+    margin: 30px auto;
+    color: #fff;
+    line-height: 110px;
+}
+.yellow{
+    color: #F9BF30;
+}
+.orange{
+    color: #ff8300;
+}
+.vector{
+    width: 35%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.titledata{
+    font-family: 'cstdb';
+    color: #fff;
+    width: 85%;
+    margin: 10px auto 40px;
+    font-size: 18px;
+    line-height: 30px;
+}
+.startquiz{
+    font-family: 'montb';
+    font-size: 30px;
+    color: #fff;
+    background-image: linear-gradient(to bottom,#ff8700 ,#ff6100);
+    padding: 25px 100px;
+    margin-left: 105px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 40%;
+    border-bottom: 5px solid #612800 !important;
+    -moz-box-shadow: inset 0px 0px 1px 0.5px yellow;
+    box-shadow: inset 0px 0px 1px 0.5px yellow;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 1px 0.5px yellow;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #333;
+}
+.startquiz:hover{
+    border-bottom: 5px solid #14092C !important;
+}
+.gamebegins{
+    background-image: url('../images/gamebegins.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+.begindata{
+    font-family: 'bnb';
+    font-size: 145px;
+    padding-left: 100px;
+    color: #fff;
+    line-height: 110px;
+}
+#count_num{
+    font-size: 500px;
+    color: #fff;
+    opacity: 0.2;
+    padding: 0px 250px;
+    font-family: 'bnb';
+    display: none;
+}
+.coin3{
+    position: absolute;
+    right: 7%;
+    width: 250px;
+    bottom: 10%;
+    z-index: 11;
+    display: none;
+}
+.coin2{
+    position: absolute;
+    right: 20%;
+    width: 240px;
+    bottom: 25%;
+    z-index: 10;
+    display:none;
+}
+.coin1{
+    position: absolute;
+    right: 31.5%;
+    width: 240px;
+    bottom: 38%;
+    z-index: 9;
+    display:none;
+}
+.letsplay{
+    background-image: url('../images/quiz.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 810px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
