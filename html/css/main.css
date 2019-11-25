@@ -15,6 +15,14 @@
     src: url('../fonts/CircularStdBold.ttf');
 }
 @font-face {
+    font-family: 'brb';
+    src: url('../fonts/Barlow-Bold.otf');
+}
+@font-face {
+    font-family: 'brr';
+    src: url('../fonts/Barlow-Regular.otf');
+}
+@font-face {
     font-family: 'myraid';
     src: url('../fonts/myriad.ttf');
 }
@@ -143,13 +151,49 @@ img{
     z-index: 9;
     display:none;
 }
-.letsplay{
-    background-image: url('../images/quiz.jpg');
+.questionsection{
+    background-image: url(../images/quizquestionbg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 810px;
-    display: flex;
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    padding: 115px 0px;
+}
+.question{
+    color: #fff;
+    font-family: 'brb';
+    font-size: 38px;
+    width: 75%;
+    margin: auto;
+}
+.answerquiz{
+    background-image: url(../images/quizansbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: inline-block;
+    padding: 40px 0px;
+}
+.answers{
+    width: 70%;
+    margin:auto;
+}
+.choice input {
+    display: none;
+}
+
+.choice {
+    border: none;
+    padding: 30px;
+    width: 45%;
+    float: left;
+    margin: 10px 10px;
+    background: #fff;
+    text-align: center;
+    font-family: brb;
+    font-size: 38px;
+}
+
+.active {
+    background-color: #8cb23b;
 }
