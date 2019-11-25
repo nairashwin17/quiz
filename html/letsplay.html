@@ -8,13 +8,59 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="letsplay">
-        
+    <div class="mainquiz">
+        <div class="questionsection">
+            <h1 class="question">In which of these places would you find the ‘Rashtrapati Nilayam’
+                one of the official retreats of the President of India?</h1>
+        </div>
+        <div class="answerquiz">
+            <div class="answers">
+                <div class="choice">
+                    <input id="choice_1" type="radio" name="choice" value="choice_1" />
+                    <label for="choice_1">Darjeeling</label>
+                </div>
+                
+                <div class="choice">
+                    <input id="choice_2" type="radio" name="choice" value="choice_2" />
+                    <label for="choice_2">Nagpur</label>
+                </div>
+                
+                
+                <div class="choice">    
+                    <input id="choice_3" type="radio" name="choice" value="choice_3" />
+                    <label for="choice_3">Sikendarabad</label>
+                </div>
+                <div class="choice">    
+                    <input id="choice_4" type="radio" name="choice" value="choice_3" />
+                    <label for="choice_4">Bhopal</label>
+                </div>
+                
+                
+            </div>
+        </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+        $(document).ready(function() {
+    var choices = $('.choice');
+    
+    choices.on('click', function(event) {
+        var choice = $(event.target);
+        choice
+            .find('[name="choice"]')
+            .prop('checked', true)
+            .trigger('change');
+    });
+    
+    var inputs = $('.choice input');
+    inputs.on('change', function(event) {
+        var input = $(event.target);
+        var choice = $(this).closest('.choice');
         
+        $('.choice.active').removeClass('active');
+        choice.addClass('active');
+    });
+});
     </script>
 </body>
 </html>
