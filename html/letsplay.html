@@ -12,25 +12,26 @@
         <div class="questionsection">
             <h1 class="question">In which of these places would you find the ‘Rashtrapati Nilayam’
                 one of the official retreats of the President of India?</h1>
+                <img src="images/Bolt.png" alt="" class="bolt">
         </div>
         <div class="answerquiz">
             <div class="answers">
-                <div class="choice">
+                <div class="choice left-round-top">
                     <input id="choice_1" type="radio" name="choice" value="choice_1" />
                     <label for="choice_1">Darjeeling</label>
                 </div>
                 
-                <div class="choice">
+                <div class="choice right-round-top">
                     <input id="choice_2" type="radio" name="choice" value="choice_2" />
                     <label for="choice_2">Nagpur</label>
                 </div>
                 
                 
-                <div class="choice">    
+                <div class="choice left-round-bottom">    
                     <input id="choice_3" type="radio" name="choice" value="choice_3" />
                     <label for="choice_3">Sikendarabad</label>
                 </div>
-                <div class="choice">    
+                <div class="choice right-round-bottom">    
                     <input id="choice_4" type="radio" name="choice" value="choice_3" />
                     <label for="choice_4">Bhopal</label>
                 </div>
@@ -57,8 +58,8 @@
         var input = $(event.target);
         var choice = $(this).closest('.choice');
         
-        $('.choice.active').removeClass('active');
-        choice.addClass('active');
+        $('.choice.right').removeClass('right');
+        choice.addClass('heartbeat right');
     });
 });
     </script>
