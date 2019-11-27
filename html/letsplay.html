@@ -21,7 +21,7 @@
                     <label for="choice_1">Darjeeling</label>
                 </div>
                 
-                <div class="choice right-round-top">
+                <div class="choice right-round-top right">
                     <input id="choice_2" type="radio" name="choice" value="choice_2" />
                     <label for="choice_2">Nagpur</label>
                 </div>
@@ -35,7 +35,9 @@
                     <input id="choice_4" type="radio" name="choice" value="choice_3" />
                     <label for="choice_4">Bhopal</label>
                 </div>
-                
+                <div class="successfull">
+                    <img src="images/success-icon.png" alt="">
+                </div>
                 
             </div>
         </div>
@@ -43,24 +45,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-    var choices = $('.choice');
-    
-    choices.on('click', function(event) {
-        var choice = $(event.target);
-        choice
-            .find('[name="choice"]')
-            .prop('checked', true)
-            .trigger('change');
-    });
-    
-    var inputs = $('.choice input');
-    inputs.on('change', function(event) {
-        var input = $(event.target);
-        var choice = $(this).closest('.choice');
+        var choices = $('.choice');
         
-        $('.choice.right').removeClass('right');
-        choice.addClass('heartbeat right');
-    });
+        choices.on('click', function(event) {
+            var choice = $(event.target);
+            choice
+                .find('[name="choice"]')
+                .prop('checked', true)
+                .trigger('change');
+        });
+    
+        var inputs = $('.choice input');
+        inputs.on('change', function(event) {
+            var input = $(event.target);
+            var choice = $(this).closest('.choice');
+            
+            $('.choice.check').removeClass('check');
+            choice.addClass('heartbeat check');
+            // $('.choice.check').removeClass("rightans")
+
+        });
+
+        $('.right').click(function(){
+            setInterval(function(){ 
+                $('.right').removeClass('check');
+                $('.right').addClass("rightans");
+                $('.choice.check').removeClass('check');
+                
+            }, 1000);
+            if($('.right').hasClass('right')){
+                $('.successfull').show().addClass('slide-in-bck-center');
+            }
+            
+        });
 });
     </script>
 </body>

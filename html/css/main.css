@@ -184,6 +184,7 @@ img{
 .answers{
     width: 70%;
     margin:auto;
+    position: relative;
 }
 .choice input {
     display: none;
@@ -207,8 +208,8 @@ img{
     top: 0px;
     z-index: 1;
 }
-.right {
-    background-color: #8cb23b;
+.check {
+    background-color: #ffae42;
 }
 .left-round-top{
     border-top-left-radius: 50px;
@@ -223,9 +224,49 @@ img{
     border-bottom-right-radius: 50px;
 }
 .heartbeat {
-	-webkit-animation: heartbeat 1s ease-in-out both;
-	        animation: heartbeat 1s ease-in-out both;
+	-webkit-animation: heartbeat 1.5s ease-in-out 1 both;
+	        animation: heartbeat 1.5s ease-in-out 1 both;
 }
+.rightans {
+    background-color: #8cb23b;
+}
+.successfull{
+    position: absolute;
+    width: 200px;
+    left: 0;
+    margin: auto;
+    top: 50px;
+    right: 50px;
+    display: none;
+}
+.slide-in-bck-center {
+	-webkit-animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	        animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+.slide-fwd-center {
+	-webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-fwd-center {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+    }
+    100% {
+      -webkit-transform: translateZ(160px);
+              transform: translateZ(160px);
+    }
+  }
+  @keyframes slide-fwd-center {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+    }
+    100% {
+      -webkit-transform: translateZ(160px);
+              transform: translateZ(160px);
+    }
+  }
 @-webkit-keyframes heartbeat {
     from {
       -webkit-transform: scale(1);
@@ -294,4 +335,27 @@ img{
               animation-timing-function: ease-out;
     }
   }
-  
+  @-webkit-keyframes slide-in-bck-center {
+    0% {
+      -webkit-transform: translateZ(600px);
+              transform: translateZ(600px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bck-center {
+    0% {
+      -webkit-transform: translateZ(600px);
+              transform: translateZ(600px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
